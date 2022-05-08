@@ -18,8 +18,6 @@ export class DateFormatPipe implements PipeTransform {
       nap = "0"+nap;
     }
     let jo = ev+"-"+honap+"-"+nap;
-    //let idozona = (new Date(value)).getTimezoneOffset() * 60000;
-    //let joDatum = (new Date(Date.now() - idozona)).toISOString().replace('T', ' ').substring(0,16);
     return jo
   }
 

@@ -16,18 +16,12 @@ export class UserService {
   }
 
   read() {
-    //return this.firestore.collection<User>(this.collekcio).doc()
-
   }
 
   update() {
-
-
   }
 
   delete() {
-
-
   }
 
 }
