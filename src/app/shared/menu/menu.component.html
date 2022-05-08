@@ -1,0 +1,27 @@
+<div class="title">
+    <h1>Józsi Masszőr Mester</h1>
+</div>
+<div class="kep">
+    <img src="../../../assets/jozsi.png" width="250" height="250">
+</div>
+<div class="menu">
+    <table>
+        <tr>
+            <td>
+                <button *ngIf="!(aktualUser)" (click)="menuSwitch('login')" value="login">Bejelentkezés</button>
+            </td>
+            <td>
+                <button *ngIf="!(aktualUser)" (click)="menuSwitch('signup')" value="signup">Regisztráció</button>
+            </td>
+            <td>
+                <button *ngIf="aktualUser" (click)="menuSwitch('main')" value="main">Időpontfoglalás</button>
+            </td>
+            <td>
+                <button *ngIf="aktualUser" (click)="menuSwitch('appointments')" value="appointments">Végső Foglalásom</button>
+            </td>
+            <td>
+                <button *ngIf="aktualUser" (click)="logout()">Kijelentkezés</button>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,22 @@
+$bgcolor: azure;
+
+html {
+    background-color: $bgcolor;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media screen and (max-width: 500px){ 
+    #menu {
+        display: flex;
+        flex-wrap: wrap;
+        position: static;
+        float: none;
+        width: 100%;
+    }
+    a {
+        float: none;
+        width: 100%;
+    }
+    
+}

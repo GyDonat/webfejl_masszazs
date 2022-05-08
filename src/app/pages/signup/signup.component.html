@@ -1,0 +1,29 @@
+<div class="form">
+    <h2>Regisztrálj, hogy Józsi lássa foglalásod!</h2>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <label for="email">Email:</label><br>
+            <input type="text" formControlName="email" /><br>
+            <label for="becenev">Becenév:</label><br>
+            <input type="text" formControlName="becenev" /><br>
+            <label for="password">Jelszó:</label><br>
+            <input type="password" formControlName="password" /><br>
+            <label for="password">Jelszó újra:</label><br>
+            <input type="password" formControlName="passwordAgain" /><br>
+        <div>
+            <button type="submit" class="bal_gomb">Regisztrálás</button>
+            <button (click)="goBack()">Inkább nem</button>
+        </div>
+    </form>
+    <ng-template [ngIf]="helytelen">
+        <div class="uzenetek">Helytelen adatok, kérlek próbáld újra!</div>
+    </ng-template>
+    <ng-template [ngIf]="sikeres">
+        <div class="uzenetek">Sikeres regisztráció!</div>
+    </ng-template>
+<div>
+
+
+
+<!-- <ng-template [ngIf]="RegistSikerult == true">
+    <div class="uzenetek">Sikeres regisztráció!</div>
+</ng-template> -->

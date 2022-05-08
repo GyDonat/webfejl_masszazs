@@ -1,0 +1,14 @@
+<div class="form">
+    <h2>Foglalj időpontot most!</h2>
+    <label for="email">Email: </label><br>
+    <input type="text" [formControl]="email" /><br>
+    <label for="password">Jelszó: </label><br>
+    <input type="password" [formControl]="password" /><br>
+    <div>
+        <button (click)="login()" class="bal_gomb">Belépés</button>
+        <button [routerLink]="'/signup'">Regisztráció</button>
+    </div>
+    <div>
+        {{ adatokObservation | async }}
+    </div>
+</div>

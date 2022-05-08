@@ -1,0 +1,36 @@
+<div>
+    <h1>Válassz egy időpontot!</h1>
+</div>
+<div>
+    <mat-form-field appearance="outline">
+        <input [defaultValue]="defaultDate" matInput [matDatepicker]="myDatePicker" [min]="minDate" [max]="maxDate" (dateChange)="onDateChange($event)" >
+        <mat-datepicker-toggle matSuffix [for]="myDatePicker" ></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker ngDefaultControl ></mat-datepicker>  
+    </mat-form-field> 
+</div>
+<div>
+    <select #hourValue (change)="hourSwitch(hourValue.value)">
+        <option value="8">8:00</option>
+        <option value="9">9:00</option>
+        <option value="10">10:00</option>
+        <option value="11">11:00</option>
+        <option value="13">13:00</option>
+        <option value="14">14:00</option>
+        <option value="15">15:00</option>
+        <option value="16">16:00</option>
+        <option value="17">17:00</option>
+        <option value="18">18:00</option>
+    </select>
+    <button (click)="foglal()">Foglalás</button>
+</div>
+<div>
+    <ng-template [ngIf]="sikeres">
+        <div class="uzenetek">Sikeres jelentkezés!</div>
+    </ng-template>
+    <ng-template [ngIf]="foglalt">
+        <div class="uzenetek">Sikertelen jelentkezés, az időpont foglalt!</div>
+    </ng-template>
+    <ng-template [ngIf]="hibas2">
+        <div class="uzenetek">Sikertelen jelentkezés, hibás választás!</div>
+    </ng-template>
+</div>

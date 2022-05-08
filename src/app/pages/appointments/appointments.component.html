@@ -1,0 +1,27 @@
+<div>
+    <!-- <form [formGroup]="emailBekeres">
+        <label for="email">Elfelejtettem az email-ed, add meg kérlek :D</label><br>
+        <input type="text" formControlName="email" /><br>
+    </form> -->
+    <table>
+       <!-- <tr>
+            <button type="submit" (click)="showTable()">Mutasd</button>
+        </tr> -->
+
+        <ng-template [ngIf]="nincsFoglalas">
+            <div>
+                Nincs foglalásod :(
+            </div>
+        </ng-template>
+
+        <ng-container *ngFor="let foglalas of appointments">
+            <tr>
+                <td><h2>{{foglalas.idopont}}</h2></td>
+                <td><button (click)="torol(foglalas)">Törlés</button></td>
+                <td><button (click)="modosit(foglalas)">Módosítás</button></td>
+            </tr>
+        </ng-container>
+    </table>
+</div>
+
+

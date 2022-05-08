@@ -1,0 +1,28 @@
+h1 {
+    display: flex;
+    text-align: center;
+}
+.title {
+    margin: auto;
+    width: fit-content;
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    //text-align: center ;
+    font-size: 16pt;
+}
+.menu {
+    margin: auto;
+    width: fit-content;
+}
+.kep {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+image {
+    max-width: fit-content;
+    margin: auto;
+}

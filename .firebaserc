@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webfejl-793ec": {
+      "hosting": {
+        "masszazs": [
+          "jozsiamasszormester"
+        ]   
+      }
+    }
+  },
+  "projects": {
+    "default": "webfejl-793ec"
+  }
+}
